@@ -1,0 +1,220 @@
+For run project = npm run dev
+for test run command = npx mocha book.test.mjs
+
+
+Book & Auth API Tests
+MongoDB Connected
+
+----- User Registration Response -----
+Status: 201
+Headers: {
+  "x-powered-by": "Express",
+  "access-control-allow-origin": "*",
+  "content-type": "application/json; charset=utf-8",
+  "content-length": "42",
+  "etag": "W/\"2a-nMoFx54+czTntmSLXl3mqIsZV4A\"",
+  "date": "Wed, 19 Mar 2025 22:12:39 GMT",
+  "connection": "close"
+}
+Body: {
+  "message": "User registered successfully"
+}
+------------------------------
+
+    ✔ should register a new user (303ms)
+
+----- User Login Response -----
+Status: 200
+Headers: {
+  "x-powered-by": "Express",
+  "access-control-allow-origin": "*",
+  "content-type": "application/json; charset=utf-8",
+  "content-length": "183",
+  "etag": "W/\"b7-9Zkfs2oK6/FO3JuVbvelZrCxkTg\"",
+  "date": "Wed, 19 Mar 2025 22:12:39 GMT",
+  "connection": "close"
+}
+Body: {
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZGI0MTU3NjhhOGJmNWEzNDI4Yjg0MyIsImlhdCI6MTc0MjQyMjM2MCwiZXhwIjoxNzQyNDI1OTYwfQ.3UIuprIt-_7UVGATfzwf8fYoWdDX1WKpV7gYM_mpnwU"
+}
+------------------------------
+
+    ✔ should log in the user (268ms)
+📌 Received Request Body: {
+  title: 'Test Book',
+  author: 'John Doe',
+  genre: 'Fiction',
+  publicationYear: 2024
+}
+
+----- Create Book Response -----
+Status: 201
+Headers: {
+  "x-powered-by": "Express",
+  "access-control-allow-origin": "*",
+  "content-type": "application/json; charset=utf-8",
+  "content-length": "168",
+  "etag": "W/\"a8-3ueEabFPyDlx7MEDde1QIs206O4\"",
+  "date": "Wed, 19 Mar 2025 22:12:40 GMT",
+  "connection": "close"
+}
+Body: {
+  "message": "Book added successfully",
+  "book": {
+    "title": "Test Book",
+    "author": "John Doe",
+    "genre": "Fiction",
+    "publicationYear": 2024,
+    "_id": "67db415868a8bf5a3428b846",
+    "__v": 0
+  }
+}
+------------------------------
+
+    ✔ should create a new book (215ms)
+
+----- Fetch All Books Response -----
+Status: 200
+Headers: {
+  "x-powered-by": "Express",
+  "access-control-allow-origin": "*",
+  "content-type": "application/json; charset=utf-8",
+  "content-length": "125",
+  "etag": "W/\"7d-su2VNuTvaP1aUBJSL2vje2x+jFs\"",
+  "date": "Wed, 19 Mar 2025 22:12:40 GMT",
+  "connection": "close"
+}
+Body: [
+  {
+    "_id": "67db415868a8bf5a3428b846",
+    "title": "Test Book",
+    "author": "John Doe",
+    "genre": "Fiction",
+    "publicationYear": 2024,
+    "__v": 0
+  }
+]
+------------------------------
+
+    ✔ should fetch all books (57ms)
+
+----- Fetch Single Book Response -----
+Status: 200
+Headers: {
+  "x-powered-by": "Express",
+  "access-control-allow-origin": "*",
+  "content-type": "application/json; charset=utf-8",
+  "content-length": "123",
+  "etag": "W/\"7b-TfI3TbyTL1duph8hOGugFrdmw18\"",
+  "date": "Wed, 19 Mar 2025 22:12:40 GMT",
+  "connection": "close"
+}
+Body: {
+  "_id": "67db415868a8bf5a3428b846",
+  "title": "Test Book",
+  "author": "John Doe",
+  "genre": "Fiction",
+  "publicationYear": 2024,
+  "__v": 0
+}
+------------------------------
+
+    ✔ should fetch a single book by ID (216ms)
+
+----- Update Book Response -----
+Status: 200
+Headers: {
+  "x-powered-by": "Express",
+  "access-control-allow-origin": "*",
+  "content-type": "application/json; charset=utf-8",
+  "content-length": "178",
+  "etag": "W/\"b2-YZThkzRsgX2gv1K2FMC7b+uorUE\"",
+  "date": "Wed, 19 Mar 2025 22:12:40 GMT",
+  "connection": "close"
+}
+Body: {
+  "message": "Book updated successfully",
+  "book": {
+    ✔ should fetch a single book by ID (216ms)
+
+----- Update Book Response -----
+Status: 200
+Headers: {
+  "x-powered-by": "Express",
+  "access-control-allow-origin": "*",
+  "content-type": "application/json; charset=utf-8",
+  "content-length": "178",
+  "etag": "W/\"b2-YZThkzRsgX2gv1K2FMC7b+uorUE\"",
+  "date": "Wed, 19 Mar 2025 22:12:40 GMT",
+  "connection": "close"
+}
+Body: {
+  "message": "Book updated successfully",
+  "book": {
+----- Update Book Response -----
+Status: 200
+Headers: {
+  "x-powered-by": "Express",
+  "access-control-allow-origin": "*",
+  "content-type": "application/json; charset=utf-8",
+  "content-length": "178",
+  "etag": "W/\"b2-YZThkzRsgX2gv1K2FMC7b+uorUE\"",
+  "date": "Wed, 19 Mar 2025 22:12:40 GMT",
+  "connection": "close"
+}
+Body: {
+  "message": "Book updated successfully",
+  "book": {
+  "x-powered-by": "Express",
+  "access-control-allow-origin": "*",
+  "content-type": "application/json; charset=utf-8",
+  "content-length": "178",
+  "etag": "W/\"b2-YZThkzRsgX2gv1K2FMC7b+uorUE\"",
+  "date": "Wed, 19 Mar 2025 22:12:40 GMT",
+  "connection": "close"
+}
+Body: {
+  "message": "Book updated successfully",
+  "book": {
+  "etag": "W/\"b2-YZThkzRsgX2gv1K2FMC7b+uorUE\"",
+  "date": "Wed, 19 Mar 2025 22:12:40 GMT",
+  "connection": "close"
+}
+Body: {
+  "message": "Book updated successfully",
+  "book": {
+Body: {
+  "message": "Book updated successfully",
+  "book": {
+    "_id": "67db415868a8bf5a3428b846",
+    "title": "Updated Test Book",
+    "author": "John Doe",
+    "genre": "Fiction",
+    "publicationYear": 2024,
+    "__v": 0
+  }
+}
+------------------------------
+
+    ✔ should update a book (63ms)
+
+----- Delete Book Response -----
+Status: 200
+Headers: {
+  "x-powered-by": "Express",
+  "access-control-allow-origin": "*",
+  "content-type": "application/json; charset=utf-8",
+  "content-length": "39",
+  "etag": "W/\"27-2sU+wH8LsO2HgYqDa0daGODIV30\"",
+  "date": "Wed, 19 Mar 2025 22:12:40 GMT",
+  "connection": "close"
+}
+Body: {
+  "message": "Book deleted successfully"
+}
+------------------------------
+
+    ✔ should delete a book (68ms)
+
+
+  7 passing (3s)
